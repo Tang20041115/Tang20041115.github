@@ -10,14 +10,14 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
-/* Fonts */
+/* 字体Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* 全局颜色Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #000000; /* Background color for the entire website, including individual sections */
   --default-color: #fafafa; /* Default color used for the majority of the text content across the entire website */
@@ -27,7 +27,7 @@
   --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* 菜单颜色Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #fafafa;  /* The default color of the main navmenu links */
   --nav-hover-color: #18d26e; /* Applied to main navmenu links when they are hovered over or active */
@@ -708,7 +708,8 @@ section,
   position: relative;
   z-index: 3;
   text-align: center; /* 水平居中 */
-  padding-top: 65vh; /* 调整这个值来控制向下偏移的程度 */
+  /*padding-top: 65vh;  调整这个值来控制向下偏移的程度 */
+  top: 300px;  /* 控制整体向下偏移 50px */
 }
 
 .hero h2 {
@@ -720,6 +721,7 @@ section,
 .hero p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  font-family: 'SimKai', 'KaiTi', sans-serif; /* 设置行书字体 */
 }
 
 .hero p span {
