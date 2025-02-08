@@ -9,7 +9,7 @@
   // Replace contact@example.com with your real receiving email address
   $receiving_email_address = '3326192368@qq.com';
 
-  if( file_exists($php_email_form = 'forms\contact.php' )) {
+  if( file_exists($php_email_form = 'forms/contact.php' )) {
     include( $php_email_form );
   } else {
     die( 'Unable to load the "PHP Email Form" Library!');
@@ -29,7 +29,8 @@
     'host' => 'smtp.qq.com',
     'username' => '3326192368@qq.com',
     'password' => 'ztdgsnuhllmfcjea',
-    'port' => '587'
+    'port' => '587',
+    'secure' => 'tls' // 开启 TLS 加密
   );
   
 
