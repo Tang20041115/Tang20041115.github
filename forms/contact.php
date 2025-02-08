@@ -29,8 +29,7 @@
     'host' => 'smtp.qq.com',
     'username' => '3326192368@qq.com',
     'password' => 'ztdgsnuhllmfcjea',
-    'port' => '587',
-    'secure' => 'tls' // 开启 TLS 加密
+    'port' => '587'
   );
   
 
