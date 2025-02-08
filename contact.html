@@ -34,6 +34,19 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
+  <!-- 实际上可以通过JavaScript来监听滚动事件，并动态地调整导航条的显示和隐藏。 -->
+  <style>
+    /* 增加这段CSS来控制导航条的样式 */
+    #header {
+      transition: top 0.3s ease-in-out;
+    }
+  
+    .hide-header {
+      top: -100px; /* 根据导航条的高度调整，隐藏导航条 */
+    }
+  </style>  
+  <!-- 为了实现需要的“往上滑动页面顶部导航条消失，往下滑动顶部导航条被带出”的效果。 -->
 </head>
 
 <body class="contact-page">
@@ -254,6 +267,30 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- 实际上可以通过JavaScript来监听滚动事件，并动态地调整导航条的显示和隐藏。 -->
+  <script>
+    // 添加这段JavaScript代码
+    let lastScrollTop = 0;  // 上次滚动的位置
+  
+    // 获取header元素
+    const header = document.getElementById('header');
+  
+    // 监听滚动事件
+    window.addEventListener('scroll', function() {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScroll > lastScrollTop) {
+        // 滚动向下，隐藏导航条
+        header.classList.add('hide-header');
+      } else {
+        // 滚动向上，显示导航条
+        header.classList.remove('hide-header');
+      }
+      
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // 防止小的负值
+    });
+  </script>  
+  <!-- 为了实现需要的“往上滑动页面顶部导航条消失，往下滑动顶部导航条被带出”的效果。 -->
 </body>
 
 </html>
