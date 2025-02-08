@@ -6,16 +6,8 @@
 * License: https://bootstrapmade.com/license/
 */
 
-
-
 (function() {
-  var _hmt = _hmt || [];
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?2abfa627e75d5075f72091385021508c";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s)
-
-  "use strict"
+  "use strict";
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
