@@ -707,6 +707,8 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  text-align: center; /* 水平居中 */
+  padding-top: 65vh; /* 调整这个值来控制向下偏移的程度 */
 }
 
 .hero h2 {
