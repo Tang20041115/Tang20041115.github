@@ -38,6 +38,28 @@
     .hide-header {
       top: -100px; /* 根据导航条的高度调整，隐藏导航条 */
     }
+
+  /* 将视频作为背景 */
+    .hero-video {
+      position: fixed;
+      /* 固定位置 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* 确保视频完整覆盖背景 */
+      z-index: -1;
+      /* 确保视频在内容后面 */
+    }
+
+    .hero {
+      position: relative;
+      /* 确保内容显示在视频上面 */
+      z-index: -1;
+      /* 确保内容在视频上面 */
+    }
+
   </style>  
   
   <!-- 百度统计 -->
@@ -83,7 +105,11 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="" >
+      <video autoplay loop muted playsinline class="hero-video">
+        <source src="path_to_your_video.mp4" type="video/mp4">
+        <source src="path_to_your_video.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
 
       <div class="container" data-aos="slide-up">
         <h2>Zichuan Tang</h2>
